@@ -135,3 +135,5 @@ LOGGING = {
     },
     "root": {"level": "INFO", "handlers": ["console"]},
 }
+
+AUTH_USER_MODEL = "accounts.User"
