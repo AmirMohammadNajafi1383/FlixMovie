@@ -1,0 +1,23 @@
+# Ignore Python bytecode files
+__pycache__
+*.pyc
+
+# Ignore development and local settings
+*.log
+*.pot
+*.pyc
+*.sqlite3
+*.bak
+*.swp
+
+
+# Ignore Docker related files and directories
+.dockerignore
+.dockerignore.example
+.dockerignore.sample
+.dockerignore.bak
+Dockerfile
+
+# Ignore any other unnecessary files or directories
+node_modules/
+venv/
