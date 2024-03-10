@@ -1,5 +1,5 @@
 """
-ASGI config for FlixMovie project.
+ASGI config for config project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -12,6 +12,6 @@ import os
 from django.core.asgi import get_asgi_application
 
 # TODO: change this in production
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "FlixMovie.settings.local")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.local")
 
 application = get_asgi_application()

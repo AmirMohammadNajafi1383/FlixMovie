@@ -45,7 +45,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "FlixMovie.urls"
+ROOT_URLCONF = "config.urls"
 
 TEMPLATES = [
     {
@@ -63,7 +63,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "FlixMovie.wsgi.application"
+WSGI_APPLICATION = "config.wsgi.application"
 
 
 # Password validation
@@ -104,7 +104,7 @@ STATIC_URL = "static/"
 STATICFILES_DIRS = [
     BASE_DIR / "assets",
 ]
-
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
 # Media files
 
@@ -112,6 +112,18 @@ MEDIA_URL = "media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 
+# Database
+
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": "postgres",
+        "USER": "postgres",
+        "PASSWORD": "postgres",
+        "HOST": "db",
+        "PORT": "5432",
+    }
+}
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
@@ -135,3 +147,5 @@ LOGGING = {
     },
     "root": {"level": "INFO", "handlers": ["console"]},
 }
+
+AUTH_USER_MODEL = "accounts.User"
